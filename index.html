@@ -457,7 +457,7 @@
 
 			const fetchProfileImage = async()=>{
 				try {
-					const res = await fetch('https://dash-board-dnrfr7qs0-yedhus-projects-10584ff7.vercel.app/api/getProfileImage')
+					const res = await fetch('https://dash-board-topaz-kappa.vercel.app/api/getProfileImage')
 				    const response = await res.json()
 					document.getElementById('profile-image').src = response
 				    console.log(res,'res',response,'response');
@@ -470,7 +470,7 @@
                 
 			const fetchAllWorks = async () => {
             try {
-                const res = await fetch('https://dash-board-dnrfr7qs0-yedhus-projects-10584ff7.vercel.app/api/getAllWork');
+                const res = await fetch('https://dash-board-topaz-kappa.vercel.app/api/getAllWork');
                 const works = await res.json();
                 console.log(works,'works');
 
