@@ -514,10 +514,10 @@
 		<script>
 			const fetchAllCategory = async()=>{
 			   try {
-				   const res = await fetch('http://localhost:3000/api/getPortCategory');
+				   const res = await fetch('https://dash-board-topaz-kappa.vercel.app/api/getPortCategory');
 				   const category = await res.json();
 				   console.log(category[2].image);
-				   document.getElementById('fashion-image').src = category[3].image
+				   document.getElementById('fashion-image').src = category[2].image
 			   } catch (error) {
 				   console.log(error.message,'errormessage');
 			   }
@@ -527,7 +527,7 @@
 
 			const fetchAllFashionImages = async()=>{
 			   try{
-				   const res = await fetch('http://localhost:3000/api/getProductImages')
+				   const res = await fetch('https://dash-board-topaz-kappa.vercel.app/api/getProductImages')
 				   const works = await res.json();
 				   console.log(works,'works');
 				   const worksContainer = document.getElementById('works-container');

@@ -769,7 +769,7 @@
 
 			const fetchAllWorks = async () => {
             try {
-                const res = await fetch('http://localhost:3000/api/getAllBlogs');
+                const res = await fetch('https://dash-board-topaz-kappa.vercel.app/api/getAllBlogs');
                 const works = await res.json();
                 console.log(works,'blogs');
 

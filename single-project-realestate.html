@@ -220,7 +220,7 @@
 
 									<div class="ph-image">
 										<div class="ph-image-inner">
-											<img src="assets/img/real1.png" alt="Image">
+											<img id="fashion-image"  src="assets/img/real1.png" alt="Image">
 										</div>
 									</div>
 								</div>
@@ -247,23 +247,7 @@
 							* You can use the project info list as a standalone element outside of the page header if you want.
 							* Class "ph-appear" is for page header only!
 							-->
-							<div class="project-info-list">
-								<ul>
-									<li>
-										<div class="pi-list-heading">Client</div>
-										<div class="pi-list-cont">Themetorium</div>
-									</li>
-									<li>
-										<div class="pi-list-heading">Year</div>
-										<div class="pi-list-cont">2021</div>
-									</li>
-									<li>
-										<div class="pi-list-heading">Role</div>
-										<div class="pi-list-cont">Visualization</div> <!-- Describe in a few words -->
-									</li>
-									
-								</ul>
-							</div>
+							
 							<!-- End project info list -->
 
 						</div> <!-- /.page-header-inner -->
@@ -385,7 +369,7 @@
 						============================ 
 						* You can use padding classes if needed. For example "padding-top-xlg-150", "padding-bottom-xlg-150", "no-padding-top", "no-padding-bottom", etc. Note that each situation may be different and each section may need different classes according to your needs. More info about helper classes can be found in the file "helper.css".
 						-->
-						<div class="tt-section">
+						<!-- <div class="tt-section">
 							<div class="tt-section-inner">
 								<div class="tt-image tti-fixed-height">
 									<figure>
@@ -396,7 +380,7 @@
 									</figure>
 								</div> 
 							</div> 
-						</div>
+						</div> -->
 						<!-- End tt-section -->
 
 
@@ -587,7 +571,7 @@
 		<script>
 			const fetchAllCategory = async()=>{
 			   try {
-				   const res = await fetch('http://localhost:3000/api/getPortCategory');
+				   const res = await fetch('https://dash-board-topaz-kappa.vercel.app/api/getPortCategory');
 				   const category = await res.json();
 				   console.log(category[2].image);
 				   document.getElementById('fashion-image').src = category[3].image
@@ -600,7 +584,7 @@
 
 			const fetchAllFashionImages = async()=>{
 			   try{
-				   const res = await fetch('http://localhost:3000/api/getRealEstateImages')
+				   const res = await fetch('https://dash-board-topaz-kappa.vercel.app/api/getRealEstateImages')
 				   const works = await res.json();
 				   console.log(works,'works');
 				   const worksContainer = document.getElementById('works-container');
